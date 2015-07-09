@@ -19,7 +19,7 @@ if hasattr(models, "UUIDField"):
 else:
 	from uuidfield import UUIDField
 
-hex_re = re.compile(r"^0x[0-9a-fA-F]+$")
+hex_re = re.compile(r"^(([0-9A-f])|(0x[0-9A-f]))+$")
 postgres_engines = [
 	"django.db.backends.postgresql_psycopg2",
 	"django.contrib.gis.db.backends.postgis",
